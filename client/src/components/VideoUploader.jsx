@@ -36,6 +36,7 @@ const VideoUploader = () => {
       await axios.post("/api/upload/", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
+      window.location.reload();
     } catch (error) {
       alert("Unable to extract video");
     }

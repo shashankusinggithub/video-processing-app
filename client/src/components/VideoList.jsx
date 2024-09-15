@@ -28,8 +28,10 @@ function VideoList() {
         )}
       </div>
 
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg m-10">
-        <h3>Uploaded Videos</h3>
+      <div className="flex flex-col items-center  overflow-x-auto shadow-md sm:rounded-lg m-10">
+        <h1 class="mb-7 mt-0 text-3xl font-bold leading-tight text-primary">
+          Uploaded Videos
+        </h1>
         <table class="w-full text-sm text-left rtl:text-right text-gray-500">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-300 dark:text-gray-900">
             <tr>
@@ -51,7 +53,7 @@ function VideoList() {
                     {new Date(video.uploaded_at).toLocaleString()}
                   </td>
                   <button
-                    className="px-6 py-3"
+                    className="px-6 py-3 text-base font-bold"
                     onClick={() => {
                       handleClick(video, ind);
                     }}

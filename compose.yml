@@ -1,10 +1,14 @@
 services:
   db:
     image: postgres
-    environment:
-      - POSTGRES_USER=${POSTGRES_USER:-postgres}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
-      - POSTGRES_DB=${POSTGRES_DB:-postgres}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
+    env_file:
+      - .env
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -19,10 +23,14 @@ services:
       - ./server:/app
 
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+        restart: true
     env_file:
       - .env
       - ./server/.env
+    environment:
+      - DATABASE_HOST=db
     develop:
       watch:
         - action: sync

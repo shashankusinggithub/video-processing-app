@@ -2,6 +2,7 @@
 venv/
 *.pyc
 *.mp4
+*.mkv
 *.vtt
 server/server/__pycache__/urls.cpython-311.pyc
 server/server/__pycache__/settings.cpython-311.pyc
