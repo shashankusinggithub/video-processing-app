@@ -1,2 +1,11 @@
 .env
 venv/
+*.pyc
+*.mp4
+*.vtt
+server/server/__pycache__/urls.cpython-311.pyc
+server/server/__pycache__/settings.cpython-311.pyc
+*pycache__/
+*migrations/
+server/server/__pycache__/settings.cpython-311.pyc
+server/server/__pycache__/urls.cpython-311.pyc

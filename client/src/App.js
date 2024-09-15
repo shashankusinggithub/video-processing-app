@@ -1,7 +1,14 @@
-import "./App.css";
+import React from "react";
+import VideoUploader from "./components/VideoUploader";
+import VideoList from "./components/VideoList";
 
 function App() {
-  return <div className="App">App</div>;
+  return (
+    <>
+      <VideoUploader />
+      <VideoList />
+    </>
+  );
 }
 
 export default App;
