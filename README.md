@@ -80,7 +80,7 @@ Ensure that the `nginx/nginx.conf` file is correctly configured to handle reques
 
 1. Clone the repository and navigate to the project directory.
 2. Ensure that the `.env` file contains your PostgreSQL configuration (or create it).
-3. Run the `run.sh` script:
+3. Run the `run.sh` script or run the commands individually inside `run.sh` if using windows :
    ```bash
    ./run.sh
    ```
