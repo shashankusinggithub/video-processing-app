@@ -34,7 +34,15 @@ This project is a web application that allows users to upload videos, process th
    cd video-processing-app
    ```
 
-2. Modify the `.env` file to set your PostgreSQL database credentials (e.g., `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`).
+2. Modify the `.env` file to set your PostgreSQL database credentials (e.g., `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`, `DATABASE_HOST`, `DATABASE_PORT`).
+
+   ```
+   POSTGRES_DB=postgres
+   POSTGRES_USER=postgres
+   POSTGRES_PASSWORD=postgres
+   DATABASE_HOST=db
+   DATABASE_PORT=5432
+   ```
 
 3. Run the provided `.sh` script to build, migrate the database, and start the Docker containers:
    ```bash

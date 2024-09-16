@@ -28,7 +28,6 @@ services:
         restart: true
     env_file:
       - .env
-      - ./server/.env
     environment:
       - DATABASE_HOST=db
     develop:
